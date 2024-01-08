@@ -1,0 +1,8 @@
+res://level/level.tscn
+res://game_ui/game_ui.tscn
+res://animal/animal.tscn
+res://launch_area/launch_area.tscn
+res://water/water.tscn
+res://cup/cup.tscn
+res://main/main.tscn
+res://level_button/level_button.tscn

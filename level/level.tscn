@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpbilpsrei8ie"]
+
+[ext_resource type="Script" path="res://level/level.gd" id="1_7vi7p"]
+[ext_resource type="Texture2D" uid="uid://c061ol80md2hn" path="res://assets/scene/colored_castle.png" id="1_y13e5"]
+[ext_resource type="PackedScene" uid="uid://cckgfppiicu8g" path="res://game_ui/game_ui.tscn" id="4_87hiu"]
+[ext_resource type="PackedScene" uid="uid://dn22bji8x22bm" path="res://water/water.tscn" id="4_88cff"]
+[ext_resource type="PackedScene" uid="uid://cuomi65n7bm42" path="res://launch_area/launch_area.tscn" id="5_ym25f"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_7vi7p")
+
+[node name="GameUi" parent="." instance=ExtResource("4_87hiu")]
+
+[node name="ColoredCastle" type="Sprite2D" parent="."]
+position = Vector2(513, 296)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_y13e5")
+
+[node name="DebugLabel" type="Label" parent="."]
+visible = false
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 424.0
+offset_bottom = 184.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "qwertyasdfgzxcvb
+qwertyasdfgzxcvb
+qwertyasdfgzxcvb
+qwertyasdfgzxcvb
+qwertyasdfgzxcvb
+qwertyasdfgzxcvb"
+
+[node name="AnimalStart" type="Marker2D" parent="."]
+position = Vector2(150, 330)
+
+[node name="Water" parent="." instance=ExtResource("4_88cff")]
+
+[node name="LaunchArea" parent="." instance=ExtResource("5_ym25f")]
+position = Vector2(48, 369)
